@@ -72,16 +72,6 @@ button {
 }
 
 /*====== START SOME GLOBAL ELEMENTS ======*/
-/*--- start unvisible mobile menu ---*/
-.mobile-menu-conteiner,
-.icon-virtues-container {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-/*--- end unvisible mobile menu ---*/
-
-
 /*--- start close button for all menu ---*/
 .close-model-button {
     display: flex;
@@ -165,16 +155,32 @@ button {
 
 
 /*=== HEADER MOBILE STYLE START ===*/
-.backdrop {
+.backdrop,
+.mobile-menu-conteiner {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 999;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+@media screen and (max-width: 1158px) {
+    .icon-virtues-container {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
 }
 
 .menu,
@@ -359,7 +365,6 @@ screen and (min-device-pixel-ratio: 2) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 24px;
 }
 
@@ -389,12 +394,13 @@ screen and (min-device-pixel-ratio: 2) {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    row-gap: 72px;
 }
 
 .list-team-item {
     background-color: #FFFFFF;
-    flex-basis: 100%;
+    /* з 264 не пропускає */
+    flex-basis: 263px; 
     border-radius: 0px 0px 4px 4px;
     box-shadow: 
         0px 2px 1px 0px rgba(46, 47, 66, 0.08), 
@@ -470,6 +476,7 @@ screen and (min-device-pixel-ratio: 2) {
 /*=== FOOTER MOBILE STYLE START ===*/
 .footer-container {
     display: flex;
+    flex-wrap: wrap;
     /* flex-direction: column; */
 }
 
@@ -506,13 +513,13 @@ screen and (min-device-pixel-ratio: 2) {
     color: #F4F4FD;
 }
 
-.footer-description {
+/* .footer-description {
     margin-right: 120px;
 }
 
 .social-container {
     margin-right: 80px;
-}
+} */
 
 .social-container .icons-social-container {
     gap: 16px;
@@ -578,9 +585,7 @@ screen and (min-device-pixel-ratio: 2) {
 .icon-send {
     margin-left: 16px;
 }
-
 /* === end Subscribe === */
-
 /*=== FOOTER MOBILE STYLE END ===*/
 
 @media screen and (min-width: 768px) {
@@ -631,7 +636,7 @@ screen and (min-device-pixel-ratio: 2) {
     }
 
     .menu-link {
-        /* тут block інакше буде inline-block gap */
+/* тут block інакше буде inline-block gap */
         display: block; 
         padding:  0;
         font-size: 16px;
@@ -654,7 +659,7 @@ screen and (min-device-pixel-ratio: 2) {
     }
 
     .address-link {
-        /* тут block інакше буде inline-block gap */
+/* тут block інакше буде inline-block gap */
         display: block;
         font-size: 12px;
         font-weight: 400;
@@ -720,8 +725,8 @@ screen and (min-device-pixel-ratio: 2) {
 
 
 /*=== TEAM TABLET STYLE START ===*/
-    .list-team-item {
-        flex-basis: calc((100% - 24px) / 2);
+    .section-team-list {
+        gap: 64px 24px;
     }
 /*=== TEAM TABLET STYLE END ===*/
 
@@ -835,7 +840,6 @@ screen and (min-device-pixel-ratio: 2) {
         pointer-events: auto;
         justify-content: center;
         align-items: center;
-        flex-basis: inherit;
         height: 112px;
         margin-bottom: 8px;
         border-radius: 4px;
@@ -850,8 +854,8 @@ screen and (min-device-pixel-ratio: 2) {
 
 
 /*=== TEAM DESKTOP STYLE START ===*/
-    .list-team-item {
-        flex-basis: calc((100% - 72px) / 4);
+    .section-team-list {
+        gap: 24px;
     }
 /*=== TEAM DESKTOP STYLE END ===*/
 
@@ -876,15 +880,6 @@ screen and (min-device-pixel-ratio: 2) {
 /* обмежую медіа щоб даремно не завантажувались стилі > mobile */
 @media screen and (max-width: 767px) {
     .mobile-menu-conteiner {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 999;
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
         background-color: #FFF;
     }
     
