@@ -609,11 +609,11 @@ screen and (min-device-pixel-ratio: 2) {
 /*=== TEAM TABLET STYLE END ===*/
 
 
-/*=== PORTFOLIO MOBILE STYLE START ===*/
+/*=== PORTFOLIO TABLET STYLE START ===*/
     .portfolio-item {
         flex-basis: calc((100% - 24px) / 2);
     }
-/*=== PORTFOLIO MOBILE STYLE END ===*/
+/*=== PORTFOLIO TABLET STYLE END ===*/
 }
 
 @media screen and
@@ -732,12 +732,13 @@ screen and (min-device-pixel-ratio: 2) {
 /*=== TEAM DESKTOP STYLE END ===*/
 
 
-/*=== PORTFOLIO MOBILE STYLE START ===*/
+/*=== PORTFOLIO DESKTOP STYLE START ===*/
     .portfolio-item {
         flex-basis: calc((100% - 48px) / 3);
     }
-/*=== PORTFOLIO MOBILE STYLE END ===*/
+/*=== PORTFOLIO DESKTOP STYLE END ===*/
 }
+
 
 
 /*=== MOBILE MENU START ===*/
