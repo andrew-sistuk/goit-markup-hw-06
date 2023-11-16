@@ -2,7 +2,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: #434455;
-    background-color: #FFFFFF;
+    background-color: #FFF;
 }
 
 /* Стилі для обнулення верхніх відступів у елементів */
@@ -42,7 +42,6 @@ address {
 
 button {
     cursor: pointer;
-    line-height: 0;
 }
 
 /* для кастомних радіокнопок, прихованих заголовків і т.д. */
@@ -65,9 +64,25 @@ button {
     margin: 0 auto;
 }
 
-/*====== START SOME GLOBAL ELEMENTS ======*/
-/*--- start close button for all menu ---*/
+:root {
+    --background-hero-gradient: 
+        linear-gradient(
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.70));
+}
 
+/*====== START SOME GLOBAL ELEMENTS ======*/
+/*--- start unvisible mobile menu ---*/
+.mobile-menu-conteiner,
+.icon-virtues-container {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+/*--- end unvisible mobile menu ---*/
+
+
+/*--- start close button for all menu ---*/
 .close-model-button {
     display: flex;
     justify-content: center;
@@ -102,13 +117,12 @@ button {
 
 .close-model-button:hover .modal-icons,
 .close-model-button:focus .modal-icons {
-    fill: #FFFFFF;
+    fill: #FFF;
 }
-
 /*--- end close button for all menu ---*/
 
-/*------ start icons social ------*/
 
+/*------ start icons social ------*/
 .icons-social-container {
     display: flex;
     /* justify-content: center; */
@@ -137,14 +151,8 @@ button {
     fill: #F4F4FD;
 }
 
-.icon-background:focus,
-.icon-background:active {
-    background-color: #404BBF;
-}
-
-
-.section-team-list .icon-background:hover,
-.section-team-list .icon-background:focus {
+.icon-background:hover,
+.icon-background:focus {
     background-color: #404BBF;
 }
 
@@ -152,13 +160,11 @@ button {
 .social-container .icon-background:focus {
     background-color: #31D0AA;
 }
-
 /*------ end icons social ------*/
 /*====== END SOME GLOBAL ELEMENTS ======*/
 
 
 /*=== HEADER MOBILE STYLE START ===*/
-
 .backdrop {
     position: fixed;
     top: 0;
@@ -188,11 +194,10 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px;
 }
 
-/*------ logo ------*/
 
+/*------ start logo ------*/
 .main-logo {
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
@@ -206,31 +211,263 @@ button {
 .span-logo {
     color: #2e2f42;
 }
+/*------ end logo ------*/
+
 
 /*------ start open mobile menu button------*/
-
 .mobile-menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: transparent;
     outline: transparent;
     background-color: transparent;
-    padding: 0;
-}
-
-.mobile-menu-button {
-    width: 24px;
-    height: 24px;
+    padding: 16px 0;
 }
 
 .icon-burger {
     fill: #2F2F37;
 }
-
 /*------ end open mobile menu button------*/
-
 /*=== HEADER MOBILE STYLE END ===*/
-/*=== HEADER TABLET STYLE START ===*/
+
+
+/*=== HERO MOBILE STYLE START ===*/
+.hero-section {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 72px 0;
+    background-color: #2E2F42;
+    background-image:
+        var(--background-hero-gradient),
+        url("../images/mobile/img-name.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media 
+screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx),
+screen and (min-device-pixel-ratio: 2) {
+    .hero-section {
+        background-image:
+            var(--background-hero-gradient),
+            url("../images/mobile/img-name@2x.jpg");
+    }
+}
+
+.hero-header {
+    margin: 0 auto 72px auto;
+    max-width: 168px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    color: #FFF;
+}
+
+.hero-button {
+    display: block;
+    margin: 0 auto;
+    min-width: 169px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    background-color: #4D5AE5;
+    color: #FFF;
+    box-shadow: 
+        0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    transition: 
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-button:hover,
+.hero-button:focus {
+    background-color: #404BBF;
+}
+/*=== HERO MOBILE STYLE END ===*/
+
+
+/*=== SECTIONS MOBILE STYLE START ===*/
+.section {
+    padding: 96px 0;
+}
+
+.header-virtues,
+.section-team-header,
+.section-portfolio-header {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+}
+
+.header-virtues {
+    margin-bottom: 8px;
+}
+
+.section-team-header,
+.section-portfolio-header {
+    margin-bottom: 72px;
+}
+
+.header-team,
+.header-portfolio {
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+}
+
+.header-team {
+    text-align: center;
+ }
+
+.paragraph-virtues,
+.paragraph-team,
+.paragraph-portfolio {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    margin-bottom: 8px;
+}
+
+.paragraph-virtues {
+    font-weight: 500;
+}
+
+.paragraph-team,
+.paragraph-portfolio { 
+    font-weight: 400;
+}
+/*=== SECTIONS MOBILE STYLE END ===*/
+
+
+/*=== VIRTUES MOBILE STYLE START ===*/
+.list-virtues {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.list-virtues-item {
+    flex-basis: 100%;
+}
+
+
+/*=== VIRTUES MOBILE STYLE END ===*/
+
+
+/*=== TEAM MOBILE STYLE START ===*/
+.icons-social-container {
+    justify-content: center;
+}
+
+.list-team-item .icons-social-container {
+    gap: 24px;
+}
+
+.section-team {
+    background-color: #F4F4FD;
+}
+
+.section-team-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.list-team-item {
+    background-color: #FFFFFF;
+    flex-basis: 100%;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 
+        0px 2px 1px 0px rgba(46, 47, 66, 0.08), 
+        0px 1px 1px 0px rgba(46, 47, 66, 0.16), 
+        0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.list-team-conteiner {
+    padding: 32px 0;
+}
+
+.list-team-conteiner>.header-team,
+.list-team-conteiner>.paragraph-team {
+    text-align: center;
+}
+/*=== TEAM MOBILE STYLE END ===*/
+
+
+/*=== PORTFOLIO MOBILE STYLE START ===*/
+.section-portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+.portfolio-item {
+    position: relative;
+    flex-basis: 100%;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-list-conteiner {
+    padding: 32px 16px;
+    border: 1px solid #E7E9FC;
+    border-top: none;
+}
+
+.conteiner-overflow {
+    position: relative;
+    overflow: hidden;
+}
+
+.conteiner-overflow .paragraph-portfolio-overlay {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 40px 32px;
+    height: 300px;
+    overflow: auto;
+    color: #F4F4FD;
+    background-color: #4D5AE5;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.conteiner-overflow:hover .paragraph-portfolio-overlay {
+    transform: translateY(0);
+}
+/*=== PORTFOLIO MOBILE STYLE END ===*/
 
 @media screen and (min-width: 768px) {
+/*=== HEADER TABLET STYLE START ===*/
     .container { 
         width: 768px;
     }
@@ -245,6 +482,7 @@ button {
 
     .section-address {
         display: flex;
+        font-style: normal;
     }
 
     .nav-page {
@@ -274,22 +512,128 @@ button {
         z-index: 999;
         background-color: #404BBF;
     }
+
+    .menu-link {
+        /* тут block інакше буде inline-block gap */
+        display: block; 
+        padding:  0;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        padding: 24px 0;
+        color: #2E2F42;
+        transition: 
+            color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .menu-link:visited {
+        color: #2E2F42;
+    }
+
+    .menu-link:hover,
+    .menu-link:focus {
+        color: #404BBF;
+    }
+
+    .address-link {
+        /* тут block інакше буде inline-block gap */
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        color: #434455;
+        transition: 
+            color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .address-link:visited {
+        color: #434455;
+    }
+
+    .address-link:hover,
+    .address-link:focus {
+        color: #404BBF;
+    }
+
+/*=== HEADER TABLET STYLE END ===*/
+
+
+/*=== HERO TABLET STYLE START ===*/
+    .hero-section {
+        max-width: 768px;
+        padding: 112px 0;
+        background-image:
+            var(--background-hero-gradient),
+            url("../images/tablet/img-name.jpg");
+    }
+
+    @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (min-device-pixel-ratio: 2) {
+        .hero-section {
+            background-image:
+                var(--background-hero-gradient),
+                url("../images/tablet/img-name@2x.jpg");
+        }
+    }
+
+    .hero-header {
+        max-width: 496px;
+        font-size: 56px;
+        line-height: 1.07;
+        margin-bottom: 36px;
+    }
+/*=== HERO TABLET STYLE END ===*/
+
+
+/*=== SECTIONS TABLET STYLE START ===*/
+    .header-virtues {
+        text-align: left;
+    }
+/*=== SECTIONS TABLET STYLE END ===*/
+
+
+/*=== VIRTUES TABLET STYLE START ===*/
+    .list-virtues-item {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+/*=== VIRTUES TABLET STYLE END ===*/
+
+
+/*=== TEAM TABLET STYLE START ===*/
+    .list-team-item {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+/*=== TEAM TABLET STYLE END ===*/
+
+
+/*=== PORTFOLIO MOBILE STYLE START ===*/
+    .portfolio-item {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+/*=== PORTFOLIO MOBILE STYLE END ===*/
 }
 
 @media screen and
 (min-width: 768px) and
 (max-width: 1158px) {
+/*=== HEADER TABLET STYLE START ===*/
+    .section-address {
+        padding: 16px 0;
+    }
+
     .list-address {
         display: flex;
         flex-direction: column;
         gap: 12px;
     }
+/*=== HEADER TABLET STYLE END ===*/
 }
 
-/*=== HEADER TABLET STYLE END ===*/
-/*=== HEADER DESkTOP STYLE END ===*/
-
 @media screen and (min-width: 1158px) {
+/*=== HEADER DESkTOP STYLE START ===*/
     .container {
         width: 1158px;
     }
@@ -298,17 +642,107 @@ button {
         margin-right: 76px;
     }
 
+    .section-address {
+        padding: 24px 0;
+    }
+
     .list-address {
         display: flex;
         gap: 40px;
     }
+
+    .address-link { 
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
+/*=== HEADER DESkTOP STYLE END ===*/
+
+/*=== HERO DESKTOP STYLE START ===*/
+    .hero-section {
+        max-width: 1440px;
+        padding: 188px 0;
+        background-image:
+            var(--background-hero-gradient),
+            url("../images/desktop/img-name.jpg");
+    }
+
+    @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (min-device-pixel-ratio: 2) {
+        .hero-section {
+            background-image:
+                var(--background-hero-gradient),
+                url("../images/desktop/img-name@2x.jpg");
+        }
+    }
+
+    .hero-header {
+        margin-bottom: 48px; 
+    }
+/*=== HERO DESKTOP STYLE END ===*/
+
+/*=== SECTIONS DESKTOP STYLE START ===*/
+    .section {
+        padding: 120px 0;
+    }
+
+    .header-virtues {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    .paragraph-virtues { 
+        font-weight: 400;
+    }
+
+/*=== SECTIONS DESKTOP STYLE END ===*/
+
+/*=== VIRTUES DESKTOP STYLE START ===*/
+    .list-virtues-item {
+        flex-basis: calc((100% - 72px) / 4);
+    }
+
+    .icon-virtues-container {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        justify-content: center;
+        align-items: center;
+        flex-basis: inherit;
+        height: 112px;
+        margin-bottom: 8px;
+        border-radius: 4px;
+        border: 1px solid #8E8F99;
+        background-color: #F4F4FD;
+    }
+
+    .icon-virtues {
+        fill: #2E2F42;
+    }
+/*=== VIRTUES DESKTOP STYLE END ===*/
+
+
+/*=== TEAM DESKTOP STYLE START ===*/
+    .list-team-item {
+        flex-basis: calc((100% - 72px) / 4);
+    }
+/*=== TEAM DESKTOP STYLE END ===*/
+
+
+/*=== PORTFOLIO MOBILE STYLE START ===*/
+    .portfolio-item {
+        flex-basis: calc((100% - 48px) / 3);
+    }
+/*=== PORTFOLIO MOBILE STYLE END ===*/
 }
 
 
 /*=== MOBILE MENU START ===*/
-
 /* обмежую медіа щоб даремно не завантажувались стилі > mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .mobile-menu-conteiner {
         position: fixed;
         top: 0;
@@ -436,7 +870,6 @@ button {
 }
 
 .modal-description {
-    /* width: 360px; */
     text-align: center;
     font-size: 16px;
     font-style: normal;
@@ -448,7 +881,6 @@ button {
 }
 
 /* === FORM CONTACTS === */
-
 
 .modal-label,
 .modal-policy,
