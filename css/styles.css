@@ -115,7 +115,7 @@ button {
 /*------ start icons social ------*/
 .icons-social-container {
     display: flex;
-    /* justify-content: center; */
+    height: 40px;
     padding: 0;
     gap: 40px;
 }
@@ -204,7 +204,8 @@ button {
 
 
 /*------ start logo ------*/
-.main-logo {
+.main-logo,
+.footer-logo {
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -474,15 +475,23 @@ screen and (min-device-pixel-ratio: 2) {
 
 
 /*=== FOOTER MOBILE STYLE START ===*/
-.footer-container {
+.footer-container,
+.footer-description,
+.social-container,
+.subscribe-container,
+.subscribe-form {
     display: flex;
-    flex-wrap: wrap;
-    /* flex-direction: column; */
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    gap: 72px;
 }
 
 .footer-logo {
     display: inline-block;
-    margin-bottom: 16px;
+    margin-bottom: 17px;
     color: #4d5ae5;
 }
 
@@ -496,7 +505,6 @@ screen and (min-device-pixel-ratio: 2) {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #FFFFFF;
-    margin-bottom: 16px;
 }
 
 .page-footer {
@@ -513,16 +521,8 @@ screen and (min-device-pixel-ratio: 2) {
     color: #F4F4FD;
 }
 
-/* .footer-description {
-    margin-right: 120px;
-}
-
-.social-container {
-    margin-right: 80px;
-} */
-
 .social-container .icons-social-container {
-    gap: 16px;
+    column-gap: 16px;
 }
 
 /* === start Subscribe === */
@@ -536,19 +536,15 @@ screen and (min-device-pixel-ratio: 2) {
     color: #FFFFFF;
 }
 
-.subscribe-form {
-    display: flex;
-    gap: 24px;
-}
-
 .subscriber-input {
-    width: 264px;
+    width: 288px;
     height: 40px;
     padding-left: 16px;
     border-radius: 4px;
     border: 1px solid #FFFFFF;
     outline: transparent;
     background-color: transparent;
+    margin-bottom: 16px;
     filter:
         drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
@@ -739,9 +735,29 @@ screen and (min-device-pixel-ratio: 2) {
 
 
 /*=== FOOTER TABLET STYLE START ===*/
-.page-footer-paragraph {
-    max-width: 264px;
-}
+    .footer-container {
+        flex-flow: row wrap;
+        gap: 72px 24px;
+    }
+
+    .footer-description,
+    .subscribe-container {
+        align-items: flex-start;
+    }
+
+    .subscribe-form {
+        flex-direction: row;
+        gap: 24px
+    }
+
+    .subscriber-input {
+        width: 264px;
+        margin-bottom: 0;
+    }
+
+    .page-footer-paragraph {
+        max-width: 264px;
+    }
 /*=== FOOTER TABLET STYLE END ===*/
 }
 
@@ -868,9 +884,20 @@ screen and (min-device-pixel-ratio: 2) {
 
 
 /*=== FOOTER DESKTOP STYLE START ===*/
-.page-footer {
-    padding: 100px 0;
-}
+    .page-footer {
+        padding: 100px 0;
+    }
+
+    .footer-container {
+        gap: 0;
+    }
+
+    .footer-description {
+        margin-right: 120px;
+    }
+    .social-container {
+        margin-right: 80px;
+    }
 /*=== FOOTER DESKTOP STYLE END ===*/
 }
 
