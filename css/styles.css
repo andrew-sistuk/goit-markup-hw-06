@@ -399,7 +399,7 @@ screen and (min-device-pixel-ratio: 2) {
 }
 
 .list-team-item {
-    background-color: #FFFFFF;
+    background-color: #FFF;
     /* з 264 не пропускає */
     flex-basis: 263px; 
     border-radius: 0px 0px 4px 4px;
@@ -504,7 +504,7 @@ screen and (min-device-pixel-ratio: 2) {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #FFFFFF;
+    color: #FFF;
 }
 
 .page-footer {
@@ -533,7 +533,7 @@ screen and (min-device-pixel-ratio: 2) {
     line-height: 1.5;
     margin-bottom: 16px;
     letter-spacing: 0.02em;
-    color: #FFFFFF;
+    color: #FFF;
 }
 
 .subscriber-input {
@@ -541,7 +541,7 @@ screen and (min-device-pixel-ratio: 2) {
     height: 40px;
     padding-left: 16px;
     border-radius: 4px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #FFF;
     outline: transparent;
     background-color: transparent;
     margin-bottom: 16px;
@@ -555,7 +555,7 @@ screen and (min-device-pixel-ratio: 2) {
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    color: #FFFFFF;
+    color: #FFF;
 }
 
 .subscribe-sumbit {
@@ -574,8 +574,8 @@ screen and (min-device-pixel-ratio: 2) {
     line-height: 1.5;
     letter-spacing: 0.64px;
     background: #4D5AE5;
-    color: #FFFFFF;
-    fill: #FFFFFF;
+    color: #FFF;
+    fill: #FFF;
 }
 
 .icon-send {
