@@ -1,2 +1,2 @@
-# goit-markup-hw-04
-Module 4
+# goit-markup-hw-06
+Module 6
